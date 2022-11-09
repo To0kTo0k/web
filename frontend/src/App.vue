@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <Header></Header>
+    <main>
+      <router-view/>
+    </main>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -30,3 +30,13 @@ nav {
   }
 }
 </style>
+
+<script>
+  import Header from "@/components/main/Header";
+  import Footer from "@/components/main/Footer";
+
+  export default {
+    name: "App",
+    components: {Footer, Header}
+  }
+</script>
